@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+:root {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  color: hsl(240, 38%, 20%);
+  overflow: hidden;
+}
+button:hover {
+  cursor: pointer;
+}
+button {
+  font-family: "Inter", sans-serif;
+}
+img {
+  vertical-align: top;
+  object-fit: cover;
+}
+
+.testimonial {
+  flex: 1 1 auto;
+  position: relative;
+  background: url("img/pattern-curve.svg") left bottom / 70% 10% no-repeat;
+
+  &__buttons {
+    width: 6.8rem;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    top: 32rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+
+  &__btn {
+    background-color: #fff;
+    padding: 1rem 1.2rem;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: mix(#fff, hsl(240, 38%, 20%), 70%);
+    }
+
+    & > img {
+      width: 8px;
+      height: 14px;
+    }
+
+    &#control-left {
+      border-radius: 50% 0 0 50%;
+      padding-right: 1.5rem;
+      margin-right: -5px;
+    }
+    &#control-right {
+      border-radius: 0 50% 50% 0;
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+
+    &.active {
+      display: flex;
+      animation: fadeIn 1.5s;
+    }
+    &.hidden {
+      display: none;
+      animation: fadeOut 2s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__img {
+    background: url("img/pattern-bg.svg") center / 100% no-repeat;
+    padding: 3.5rem;
+    margin-bottom: 3rem;
+    & img {
+      width: 25.5rem;
+      border-radius: 0.4rem;
+      box-shadow: 0px 30px 60px -40px hsl(240deg 38% 20%);
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding: 2.5rem 0.9rem;
+    background: url("img/pattern-quotes.svg") top center / 6rem 5rem no-repeat;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 133%;
+    margin-bottom: 1.4rem;
+  }
+
+  &__author {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__author-profession {
+    display: block;
+    font-weight: 500;
+    color: hsl(240, 18%, 77%);
+  }
+}
+
+@media (min-width: 769px) {
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: auto;
+
+    &__buttons {
+      top: 32rem;
+      left: 18rem;
+    }
+    &__body {
+      position: relative;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      padding: 0rem 2.5rem;
+    }
+    &__img {
+      max-width: max-content;
+      position: absolute;
+      right: 3.5rem;
+      top: 40%;
+      transform: translateY(-50%);
+      padding: 4.5rem;
+      margin: 0;
+
+      & img {
+        width: 35.5rem;
+      }
+    }
+    &__content {
+      width: 57%;
+      position: relative;
+      z-index: 2;
+      text-align: left;
+      background-position: 9.5rem 1.5rem;
+      background-size: 9rem 7rem;
+      padding: 6rem 0;
+      margin: 0;
+    }
+    &__text {
+      font-size: 2.4rem;
+    }
+    &__author-profession {
+      display: inline;
+      margin-left: 0.5rem;
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .testimonial {
+    &__buttons {
+      top: 34rem;
+      left: 23%;
+    }
+    &__body {
+      padding: 0 5.5rem;
+    }
+    &__text {
+      font-size: 2.8rem;
+      margin-bottom: 4rem;
+    }
+    &__img {
+      right: 5.5rem;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .testimonial {
+    &__buttons {
+      top: 44.5rem;
+      left: calc(-20rem + 27vw);
+    }
+    &__body {
+      padding: 0rem 16.5rem;
+    }
+    &__content {
+      max-width: 72rem;
+      background-position: 9.5rem -0.5rem;
+      background-size: 12rem 10rem;
+    }
+    &__img {
+      right: 7.5rem;
+      padding: 9rem;
+      & img {
+        width: max-content;
+      }
+    }
+    &__text {
+      font-size: 3.2rem;
+      line-height: 137%;
+      margin-bottom: 4rem;
+    }
+    &__author {
+      font-size: 2rem;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

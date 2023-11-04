@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://evgiss.github.io/Coding-bootcamp-testimonials-slider/)
+- [Live Site URL](https://eugiss.github.io/Coding-bootcamp-testimonials-slider/)
 
 ### Built with
 
@@ -26,5 +26,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [EvgiSs](https://github.com/EvgiSs)
-- Frontend Mentor - [Evgi](https://www.frontendmentor.io/profile/EvgiSs)
+- Website - [EvgiSs](https://github.com/EugiSs)
+- Frontend Mentor - [Evgi](https://www.frontendmentor.io/profile/EugiSs)
